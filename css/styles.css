@@ -42,14 +42,17 @@ address {
   color: var(--accent-color);
 }
 
-.section-padding {
+.container {
   padding-left: 215px;
   padding-right: 215px;
+  width: 1600px;
 }
 /*Стили для шапки сайта*/
 .header-site {
   display: flex;
   justify-content: space-between;
+  height: 80px;
+
   background-color: var(--main-color);
   border: 1px solid var(--border-head-color);
   font-weight: 500;
@@ -60,20 +63,18 @@ address {
 }
 .header-nav {
   display: flex;
+  align-items: center;
 }
-.header-nav > a {
-  display: flex;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
+
 .header-links-pages {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   margin-left: 93px;
-  width: 294px;
 
   color: var(--title-text-color);
+}
+.header-links-pages li {
+  margin-right: 50px;
 }
 .header-links-pages p::first-letter {
   text-transform: capitalize;
@@ -81,11 +82,12 @@ address {
 
 .header-links-contacts {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 307px;
 
   color: var(--text-color);
+}
+.header-links-contacts li:not(:last-child) {
+  margin-right: 50px;
 }
 
 .header-site a:hover,
@@ -100,7 +102,7 @@ address {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 200px 237px;
+  height: 600px;
 
   background-color: var(--first-decor-color);
   color: var(--main-color);
@@ -147,17 +149,25 @@ address {
 /*Слили для секции особенности*/
 .features {
   padding-top: 94px;
+  padding-bottom: 94px;
   background-color: var(--main-color);
 }
 .features ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 1170px;
+}
+.features li {
+  width: 270px;
+  height: 101px;
 }
 .features li:not(:last-child) {
   margin-right: 30px;
 }
 .features h3 {
+  margin: 0px;
+
   font-weight: bold;
   font-size: 14px;
   line-height: 1.14;
@@ -168,6 +178,7 @@ address {
 }
 
 .features p {
+  margin: 10px 0px 0px 0px;
   font-weight: normal;
   font-size: 14px;
   line-height: 1.71;
@@ -181,10 +192,15 @@ address {
 }
 /* стили для секции виды работ*/
 .work-profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   background-color: var(--main-color);
 }
 
 .work-profile h2 {
+  margin: 0px 0px 50px 0px;
   font-weight: bold;
   font-size: 36px;
   line-height: 1.17;
@@ -196,6 +212,13 @@ address {
 
 .work-profile h2::first-letter {
   text-transform: capitalize;
+}
+.work-profile-images {
+  display: flex;
+  justify-content: space-between;
+}
+.work-profile-images a {
+  box-sizing: content-box;
 }
 /* стили для секции наша команда*/
 .our-team {
