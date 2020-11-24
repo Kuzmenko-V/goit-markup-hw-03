@@ -36,6 +36,9 @@ address {
 .body-portfolio {
   font-family: 'Roboto';
   font-style: normal;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .header-links-pages .site-page-current {
@@ -216,16 +219,23 @@ address {
 .work-profile-images {
   display: flex;
   justify-content: space-between;
+
+  margin-bottom: 90px;
 }
-.work-profile-images a {
-  box-sizing: content-box;
-}
+
 /* стили для секции наша команда*/
 .our-team {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   background-color: var(--secondary-decor-color);
 }
 
 .our-team h2 {
+  margin-top: 94px;
+  margin-bottom: 50px;
+
   font-weight: bold;
   font-size: 36px;
   line-height: 1.17;
@@ -237,6 +247,11 @@ address {
 
 .our-team h2::first-letter {
   text-transform: capitalize;
+}
+.our-team ul {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 90px;
 }
 
 .our-team li {
@@ -280,17 +295,26 @@ address {
 .footer-site {
   background-color: var(--first-decor-color);
   font-weight: normal;
+
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
-.footer-site p {
+.address-company {
+  margin-top: 20px;
+}
+
+.address-company li:first-child {
+  color: var(--main-color);
+  font-weight: normal;
   font-size: 14px;
   line-height: 1.71;
   /* or 171% */
   letter-spacing: 0.03em;
-  color: var(--main-color);
 }
 
-.footer-site span {
+.address-company li:not(:first-child) {
+  margin-top: 9px;
   font-size: 14px;
   line-height: 1.71;
   /* or 171% */
@@ -300,9 +324,21 @@ address {
 
 /*CSS Портфолио*/
 .main-portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: var(--main-color);
 }
+.portfolio-filters {
+  display: flex;
+  justify-content: center;
+  margin-top: 94px;
+  margin-bottom: 50px;
+}
 
+.portfolio-filters li:not(:last-child) {
+  margin-right: 8px;
+}
 .portfolio-filters button {
   font-family: 'Roboto';
   font-style: normal;
@@ -320,8 +356,7 @@ address {
 .filter {
   background: var(--secondary-decor-color);
   border-radius: 4px;
-  width: 168px;
-  height: 38px;
+  padding: 6px 22px;
   border: none;
 }
 
@@ -333,16 +368,30 @@ address {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+  color: var(--main-color);
+}
+.portfolio-item {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+  margin-bottom: 94px;
 }
 .item {
+  margin-top: 30px;
+  margin-left: 30px;
+  flex-basis: calc(100% / 3 - 30px);
   background: var(--main-color);
   border: 1px solid var(--border-color);
   box-sizing: border-box;
   width: 370px;
   height: 404px;
 }
-
+.item div {
+  margin: 16px 24px 20px 24px;
+}
 .item h3 {
+  margin: 0px;
   font-weight: bold;
   font-size: 18px;
   line-height: 2;
@@ -353,6 +402,8 @@ address {
 }
 
 .item h4 {
+  margin: 0px;
+  margin-top: 4px;
   font-weight: normal;
   font-size: 16px;
   line-height: 1.88;
